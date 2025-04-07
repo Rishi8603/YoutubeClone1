@@ -1,0 +1,141 @@
+.header{
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position:fixed;
+  /* height: 50px; */
+  top:0;
+  left:0;
+  right: 0;
+  background-color: white;
+  border-bottom-width: 1px ;
+  border-bottom-style: solid;
+  border-bottom-color:rgb(212, 208, 208);
+  z-index: 10;
+}
+.leftSection{
+  /* background-color: rgb(153, 0, 255); */
+  display: flex;
+  /*agr simply align -item likhte to kuch  nhi hoga..it is a property of flexbox..so pehle flex lana hoga*/
+  align-items: center;
+}
+.leftSection .hamburger-logo{
+  height:24px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.leftSection .youtube-logo{
+  height:20px;
+}
+
+.middleSection{
+  display: flex;
+  background-color: white;
+  flex:1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-bar{
+  flex:1;
+  height: 40px;
+  width: 0;
+  padding-left: 10px;
+  font-size: 15px;
+  border: 1px solid gray;
+  /* border-radius: 1px; */
+  box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
+  box-sizing: border-box; /* Add this line */
+}
+.search-bar::placeholder{
+  font-family: Roboto,Arial;
+  font-size: 16px;
+}
+.srchButton{
+  width: 60px;
+  height: 40px;
+  /* margin-top:1px; */
+  border: 1px solid gray; 
+  margin-left: -1px;
+  margin-right: 9px;
+  box-sizing: border-box; /* Add this line */
+}
+.srchButtonImg{
+  height: 30px;
+}
+.voiceB{
+  height: 40px;
+  background-color: rgb(255, 253, 253);
+  width: 40px;
+  border: none;
+  border-radius: 20px;/*trick:take half of height and width*/
+}
+.voice{
+  height: 24px;
+  margin-top: 4px;
+}
+.rightSection{
+  background-color: rgb(255, 255, 255);
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 18px;
+}
+.Create{
+  height: 30px;
+  background-color: rgb(255, 253, 253);
+  width: 40px;
+  border: none;
+  border-radius: 20px;/*trick:take half of height and width*/
+  box-sizing: border-box;
+}
+.Apps{
+  height: 30px;
+  background-color: rgb(255, 253, 253);
+  width: 40px;
+  border: none;
+  border-radius: 20px;/*trick:take half of height and width*/
+  box-sizing: border-box;
+}
+.Notification{
+  height: 30px;
+  background-color: rgb(255, 253, 253);
+  width: 40px;
+  border: none;
+  border-radius: 20px;/*trick:take half of height and width*/
+  box-sizing: border-box;
+}
+.Noti{
+  /* position :absolute; */
+  position: relative;
+}
+.NotiCount{
+  font-family: Roboto,Arial;
+  font-size: 11px;
+  padding-left:6px ;
+  padding-right: 6px;
+  padding-top:2px;
+  padding-bottom:2px;
+  position:absolute;
+  top:-2px; /*we can add negative val to go beyond the limit */
+  right:0;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
+.profileB{
+  height: 30px;
+  background-color: rgb(255, 253, 253);
+  width: 40px;
+  border: none;
+  border-radius: 20px;/*trick:take half of height and width*/
+  box-sizing: border-box;
+}
+.profileBI{
+  height:30px;
+  border-radius: 15px;
+}

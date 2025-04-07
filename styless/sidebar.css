@@ -1,0 +1,36 @@
+.sidebar{
+  height: 1000px;
+  position:fixed;
+  left:0;
+  bottom: 0;
+  top:55px;
+  width: 72px;
+  z-index: 200;
+  padding-top: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* justify-content aligns items on the main axis (horizontal by default).
+  /*align-items aligns items on the cross axis (vertical by default). */
+  height:74px;
+  cursor: pointer;
+}
+.side:hover{
+  background-color: rgb(178, 178, 178);
+}
+/* .homeLogo{
+  height: 24px;
+} */
+ /* we can targer image by this also */
+.side img{
+  height:24px;
+  margin-bottom:4px;
+}
+.side div{
+  font-family:Roboto,Arial;
+  font-size: 10px;
+}
