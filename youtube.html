@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="header">  
+    <header class="header">  
       <div class="leftSection">
         <img class="hamburger-logo" src="Images/icons/hamburger-menu.svg">
         <img class="youtube-logo" src="Images/icons/youtube-logo.svg">
@@ -21,33 +21,39 @@
         <input class="search-bar" type="text" placeholder="Search">
         <button class="srchButton">
           <img class="srchButtonImg" src="Images/icons/search.svg" alt="search">
+          <div class="tooltip">Search</div>
         </button>
         <button class="voiceB">
           <img class="voice" src="Images/icons/voice-search-icon.svg" alt="search">
+          <div class="tooltip">Search with your voice</div>
         </button>
       </div>
       <div class="rightSection">
         <button class="Create">
           <img class="CreateI" src="Images/icons/upload.svg">
+          <div class="tooltip">Create</div>
         </button>
         <button class="Apps">
           <img class="AppsI" src="Images/icons/youtube-apps.svg">
+          <div class="tooltip">Apps</div>
         </button>
         <div class="Noti">
           <button class="Notification">
             <img class="NotificationI" src="Images/icons/notifications.svg">
           </button>
           <div class="NotiCount">3</div>
+          <div class="tooltip">Notification</div>
         </div>
         <button class="profileB">
-          <img class="profileBI" src="Images/icons/unnamed.jpg">
+          <a href="https://www.youtube.com/">
+            <img class="profileBI" src="Images/icons/channels4_profile.jpg">
+          </a>
         </button>
       </div>  
-    </div>
-    <div class="sidebar">
+    </header>
+    <nav class="sidebar">
       <div class="side">
         <img  src="Images/icons/home.svg">
-        
         <div>Home</div>
       </div>
       <div class="side">
@@ -74,8 +80,9 @@
         
         <div>Library</div>
       </div>
-    </div>
-    <div class="video-grid">
+    </nav>
+    <main>
+      <section class="video-grid">
       <div class="video-preview">
         <div class="thumbnail-row">
           <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY">
@@ -219,7 +226,148 @@
           </div>
         </div>
       </div>
-    </div>
-  
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="Images/thumbnails/thumbnail-7.webp">
+          <div class="time-stamp">time</div>
+
+        </div>
+        <div class="videoInfo-grid"> 
+          <div class="channelPic">        
+            <img class="profilePic" src="Images/channelPic/channel-7.jpeg">
+          </div>
+          <div class="videoInfo">
+            <p class="videoTitle">
+              Why Planes Don't Fly Over Tibet            </p>
+            <p class="videoAuthor">
+              RealLifeLore
+            </p>
+            <p class="videoStats">
+              141M views &#183; 1 year ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="Images/thumbnails/thumbnail-8.webp">
+          <div class="time-stamp">time</div>
+
+        </div>
+        <div class="videoInfo-grid"> 
+          <div class="channelPic">        
+            <img class="profilePic" src="Images/channelPic/channel-8.jpeg">
+          </div>
+          <div class="videoInfo">
+            <p class="videoTitle">
+
+              Inside The World's Biggest Passenger Plane           </p>
+            <p class="videoAuthor">
+              Tech Vision
+            </p>
+            <p class="videoStats">
+              3M views &#183; 10 mo ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="Images/thumbnails/thumbnail-9.webp">
+          <div class="time-stamp">time</div>
+
+        </div>
+        <div class="videoInfo-grid"> 
+          <div class="channelPic">        
+            <img class="profilePic" src="Images/channelPic/channel-9.jpeg">
+          </div>
+          <div class="videoInfo">
+            <p class="videoTitle">
+              The SECRET to Super Human STRENGTH 
+            </p>           
+            <p class="videoAuthor">
+                ThenX
+            </p>
+            <p class="videoStats">
+              12M views &#183; 5 year ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="Images/thumbnails/thumbnail-10.webp">
+          <div class="time-stamp">time</div>
+
+        </div>
+        <div class="videoInfo-grid"> 
+          <div class="channelPic">        
+            <img class="profilePic" src="Images/channelPic/channel-10.jpeg">
+          </div>
+          <div class="videoInfo">
+            <p class="videoTitle">
+              How The World's Largest Cruise Ship Makes 30,000 Meals Every Day            </p>
+            <p class="videoAuthor">
+              Business Insider
+            </p>
+            <p class="videoStats">
+              141M views &#183; 1 year ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="Images/thumbnails/thumbnail-11.webp">
+          <div class="time-stamp">time</div>
+
+        </div>
+        <div class="videoInfo-grid"> 
+          <div class="channelPic">        
+            <img class="profilePic" src="Images/channelPic/channel-11.jpeg">
+          </div>
+          <div class="videoInfo">
+            <p class="videoTitle">
+
+              Dubai's Crazy Underwater Train and Other Things #Only in Dubai            </p>
+            <p class="videoAuthor">
+              Destination Tips
+            </p>
+            <p class="videoStats">
+              3M views &#183; 1 year ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="Images/thumbnails/thumbnail-12.webp">
+          <div class="time-stamp">time</div>
+
+        </div>
+        <div class="videoInfo-grid"> 
+          <div class="channelPic">        
+            <img class="profilePic" src="Images/channelPic/channel-12.jpeg">
+          </div>
+          <div class="videoInfo">
+            <p class="videoTitle">
+              What would happen if you didn’t drink water? - Mia Nacamulli            </p>
+            <p class="videoAuthor">
+              TED-Ed
+            </p>
+            <p class="videoStats">
+              12M views &#183; 5 year ago
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+    </main>
   </body>
 </html>

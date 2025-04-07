@@ -1,9 +1,28 @@
 .video-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   column-gap: 16px;
   row-gap: 40px;
+  /* inheritance works with only text property...so element inside the parent will inherit this propert */
+  /* text-decoration: underline; */ /*-->this is inheritance */
 }
+@media (max-width:750px) {
+  .video-grid{
+    /* 1 fr 1 fr mtlb 2 col creat hoga..3 br 1 fr than 3 col..likewise */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(min-width:751px) and (max-width:999px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width:1000px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .thumbnail-row {
   margin-bottom: 10px;
   position:relative;
@@ -35,11 +54,9 @@
   color: #606060;
 }
 .time-stamp{
-  font-family: Roboto,Arial;
   font-weight: 500;
   font-size: 12px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 4px;
   border-radius: 2px;
   position:absolute;
   /* top:10px; */
