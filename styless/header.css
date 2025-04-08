@@ -157,7 +157,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
-button.topRight:hover{
+.topRight:hover{
   background-color: rgb(178, 178, 178);
 }
 
