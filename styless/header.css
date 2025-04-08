@@ -15,18 +15,32 @@
   z-index: 10;
 }
 .leftSection{
-  /* background-color: rgb(153, 0, 255); */
   display: flex;
   /*agr simply align -item likhte to kuch  nhi hoga..it is a property of flexbox..so pehle flex lana hoga*/
   align-items: center;
 }
-.leftSection .hamburger-logo{
-  height:24px;
+.hamburger-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
   margin-left: 20px;
   margin-right: 20px;
 }
+.hamburger-button:hover{
+  background-color: rgb(178, 178, 178);
+}
+
+.hamburger-logo{
+  height:24px;
+  width:24px;
+}
 .leftSection .youtube-logo{
-  height:20px;
+  height:24px;
 }
 
 .middleSection{
@@ -49,6 +63,7 @@
   /* border-radius: 1px; */
   box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
   box-sizing: border-box; /* Add this line */
+  border-radius: 20px 0 0 20px; /* round only the left side */
 }
 .search-bar::placeholder{
   font-family: Roboto,Arial;
@@ -58,20 +73,48 @@
   width: 60px;
   height: 40px;
   border: 1px solid rgb(204, 204, 204); 
-  /* margin-top:1px; */
+  border-radius: 0 20px 20px 0; /* round only the right side */
   margin-left: -1px;
   margin-right: 9px;
   box-sizing: border-box; /* Add this line */
 }
-.srchButton, .voiceB, .Create, .Apps, .Noti{
+.srchButtonImg{
+  height: 28px;
+}
+.voiceB{
+  /* margin-left:-9px; */
+  border: none;
+}
+.microphone{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.microphone:hover{
+  background-color: rgb(178, 178, 178);
+}
+
+.voice-logo{
+  height:24px;
+  width:24px;
+}
+
+
+.srchButton, .microphone, .topRight{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.srchButton .tooltip, .voiceB .tooltip,
-.Create .tooltip, .Apps .tooltip,
-.Noti .tooltip{
+.srchButton .tooltip, .microphone .tooltip,
+.topRight .tooltip,.Noti .tooltip{
   position:absolute;
   background-color: gray;
   color:white;
@@ -86,60 +129,60 @@
   pointer-events: none;
   white-space: nowrap;
 }
-.srchButton:hover .tooltip, .voiceB:hover .tooltip,
-.Create:hover .tooltip, .Apps:hover .tooltip,
+.srchButton:hover .tooltip, .microphone:hover .tooltip,
+.topRight:hover .tooltip,
 .Noti:hover .tooltip{
   opacity: 1;
   transition: opacity 0.15;
 }
-.srchButtonImg{
-  height: 28px;
-}
-.voiceB{
-  height: 40px;
-  background-color: rgb(255, 253, 253);
-  width: 40px;
-  border: none;
-}
-.voice{
-  height: 24px;
-}
+
+
 
 .rightSection{
-  background-color: rgb(255, 255, 255);
   width: 180px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-right: 18px;
 }
-.Create{
-  height: 30px;
-  background-color: rgb(255, 253, 253);
+.topRight{
+  height: 40px;
   width: 40px;
+  border-radius: 50%;
   border: none;
-  border-radius: 20px;/*trick:take half of height and width*/
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.Apps{
-  height: 30px;
-  background-color: rgb(255, 253, 253);
-  width: 40px;
-  border: none;
-  border-radius: 20px;/*trick:take half of height and width*/
+button.topRight:hover{
+  background-color: rgb(178, 178, 178);
 }
-.AppsI,.CreateI,.NotificationI{
+
+.AppsI,.CreateI,.profileBI{
   height: 24px;
+  border-radius: 50%; /* For circular profile pic */
+}
+
+.Noti{
+  position: relative;
 }
 .Notification{
-  height: 30px;
-  background-color: rgb(255, 253, 253);
+  height: 40px;
   width: 40px;
+  border-radius: 50%;
   border: none;
-  border-radius: 20px;/*trick:take half of height and width*/
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.Noti{
-  /* position :absolute; */
-  position: relative;
+.Notification:hover {
+  background-color: rgb(178, 178, 178);
 }
 .NotiCount{
   font-family: Roboto,Arial;
@@ -156,15 +199,3 @@
   border-radius: 10px;
 }
 
-.profileB{
-  height: 30px;
-  background-color: rgb(255, 253, 253);
-  width: 40px;
-  border: none;
-  border-radius: 20px;/*trick:take half of height and width*/
-  box-sizing: border-box;
-}
-.profileBI{
-  height: 30px;
-  border-radius: 15px;
-}

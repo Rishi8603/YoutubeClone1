@@ -30,11 +30,17 @@
 
 .thumbnail {
   width: 100%;
+  border-radius:10px;
 }
 .videoInfo-grid{
   display:grid;
   grid-template-columns: 50px 1fr;
 }
+.videoInfo a {
+  text-decoration: none;
+  color: black;
+}
+
 .profilePic {
   width: 36px;
   border-radius: 50px;

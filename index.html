@@ -14,26 +14,31 @@
   <body>
     <header class="header">  
       <div class="leftSection">
-        <img class="hamburger-logo" src="Images/icons/hamburger-menu.svg">
-        <img class="youtube-logo" src="Images/icons/youtube-logo.svg">
+        <div class="hamburger-button">
+          <img class="hamburger-logo" src="Images/icons/hamburger-menu.svg">
         </div>
-      <div class="middleSection">
-        <input class="search-bar" type="text" placeholder="Search">
-        <button class="srchButton">
-          <img class="srchButtonImg" src="Images/icons/search.svg" alt="search">
-          <div class="tooltip">Search Kro</div>
-        </button>
-        <button class="voiceB">
-          <img class="voice" src="Images/icons/voice-search-icon.svg" alt="search">
-          <div class="tooltip">Search with your voice</div>
-        </button>
-      </div>
+        <a href="https://www.youtube.com/"><img class="youtube-logo" src="Images/icons/youtube-logo.svg">
+        </a>
+        </div>
+        <div class="middleSection">
+          <input id="searchInput" class="search-bar" type="text" placeholder="Search">
+          <button class="srchButton" onclick="searchYouTube()">
+            <img class="srchButtonImg" src="Images/icons/search.svg" alt="search">
+            <div class="tooltip">Search</div>
+          </button>
+          <button class="voiceB">
+            <div class="microphone">
+              <img class="voice-logo" src="Images/icons/voice-search-icon.svg" alt="search">
+              <div class="tooltip">Search with your voice</div>
+            </div>
+          </button>
+        </div>
       <div class="rightSection">
-        <button class="Create">
+        <button class="topRight">
           <img class="CreateI" src="Images/icons/upload.svg">
           <div class="tooltip">Create</div>
         </button>
-        <button class="Apps">
+        <button class="topRight">
           <img class="AppsI" src="Images/icons/youtube-apps.svg">
           <div class="tooltip">Apps</div>
         </button>
@@ -44,66 +49,79 @@
           <div class="NotiCount">3</div>
           <div class="tooltip">Notification</div>
         </div>
-        <button class="profileB">
-          <a href="https://www.youtube.com/">
-            <img class="profileBI" src="Images/icons/channels4_profile.jpg">
-          </a>
+        <button class="topRight">
+          <img class="profileBI" src="Images/icons/channels4_profile.jpg">
+          <div class="tooltip">Profile</div>
         </button>
       </div>  
     </header>
+    <script>
+      function searchYouTube() {
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+          window.location.href = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+        }
+      }
+    </script>
     <nav class="sidebar">
       <div class="side">
-        <img  src="Images/icons/home.svg">
+        <a href="https://www.youtube.com/"><img  src="Images/icons/home.svg">
+        </a>
         <div>Home</div>
       </div>
       <div class="side">
-        <img  src="Images/icons/explore.svg">
+        <a href="https://www.youtube.com/feed/trending?bp=6gQJRkVleHBsb3Jl"><img  src="Images/icons/explore.svg">
+        </a>
         <div>Explore</div>
       </div>
       <div class="side">
-        <img  src="Images/icons/subscriptions.svg">
-        
+        <a href="https://www.youtube.com/feed/subscriptions"><img  src="Images/icons/subscriptions.svg">
+      </a>
         <div>Subscriptions</div>
       </div>
       <div class="side">
-        <img  src="Images/icons/originals.svg">
-        
+        <a href="https://www.youtube.com/premium"><img  src="Images/icons/originals.svg">
+        </a>
         <div>Originals</div>
       </div>
       <div class="side">
-        <img  src="Images/icons/youtube-music.svg">
-        
+        <a href="https://music.youtube.com/"><img  src="Images/icons/youtube-music.svg">
+        </a>
         <div>Youtube Music</div>
       </div>
       <div class="side">
-        <img  src="Images/icons/library.svg">
-        
+        <a href="https://www.youtube.com/feed/playlists"><img  src="Images/icons/library.svg">
+        </a>
         <div>Library</div>
       </div>
     </nav>
     <main>
       <section class="video-grid">
       <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY">
-          <img class="thumbnail"  src="Images/thumbnails/thumbnail-1.webp">
-          <div class="time-stamp">time</div>
-          </a>
-        </div>
+        <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY">
+          <div class="thumbnail-row">
+              <img class="thumbnail"  src="Images/thumbnails/thumbnail-1.webp">
+              <div class="time-stamp">13:39</div>
+          </div>
+        </a>  
         <div class="videoInfo-grid"> 
-          <div class="channelPic"> 
-              <img class="profilePic" src="Images/channelPic/channel-1.jpeg">
+          <div class="channelPic">
+            <a href="https://www.youtube.com/@mkbhd">
+              <img class="profilePic" src="Images/channelPic/channel-1.jpeg"> 
+            </a>
           </div>
           <div class="videoInfo">
-            <p class="videoTitle">
-              Talking Tech <strong>and AI with</strong> Google CEO Sundar Pichai!
-            </p>
-            <p class="videoAuthor">
-              Marques Brownlee
-            </p>
-            <p class="videoStats">
-              3.4M views · 6 months ago
-            </p>
+            <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY">
+              <p class="videoTitle">
+                Talking Tech <strong>and AI with</strong> Google CEO Sundar Pichai!
+              </p>
+              <p class="videoAuthor">
+                Marques Brownlee
+              </p>
+              <p class="videoStats">
+                3.4M views · 6 months ago
+              </p>
+            </a>
           </div>
         </div>
       </div>
@@ -111,7 +129,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-2.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
         </div>
         <div class="videoInfo-grid"> 
           <div class="channelPic">        
@@ -134,7 +152,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/hq720.avif">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -158,7 +176,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-4.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -182,7 +200,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-5.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -206,7 +224,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-6.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -230,7 +248,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-7.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -253,7 +271,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-8.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -277,7 +295,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-9.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -301,7 +319,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-10.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -324,7 +342,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-11.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 
@@ -348,7 +366,7 @@
       <div class="video-preview">
         <div class="thumbnail-row">
           <img class="thumbnail" src="Images/thumbnails/thumbnail-12.webp">
-          <div class="time-stamp">time</div>
+          <div class="time-stamp">13:39</div>
 
         </div>
         <div class="videoInfo-grid"> 

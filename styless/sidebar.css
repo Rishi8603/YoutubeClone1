@@ -18,6 +18,7 @@
   /*align-items aligns items on the cross axis (vertical by default). */
   height:74px;
   cursor: pointer;
+  border-radius:7px;
 }
 .side:hover{
   background-color: rgb(178, 178, 178);
