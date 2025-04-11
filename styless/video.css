@@ -73,7 +73,10 @@
   background-color: black;
   color:white;
 }
-
+a {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* inherits text color from parent */
+}
 
 
 
